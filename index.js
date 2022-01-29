@@ -63,5 +63,5 @@ cosmeticCust.get().then((snapshot) => {
 // update a field in your collection
 
 const products = db.collection('products')
-products.doc('100').update({brand:'bobbie brown', inStock:30,})
+products.doc('100').update({brand:'bobbie brown', inStock:30})
 
