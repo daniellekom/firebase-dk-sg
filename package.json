@@ -1,0 +1,22 @@
+{
+  "name": "firebase-dk-sg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniellekom/firebase-dk-sg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniellekom/firebase-dk-sg/issues"
+  },
+  "homepage": "https://github.com/daniellekom/firebase-dk-sg#readme",
+  "dependencies": {
+    "firebase-admin": "^10.0.2"
+  }
+}
