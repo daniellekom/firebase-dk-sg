@@ -1,3 +1,4 @@
+//api means express app. something remember express
 
 ////SET UP CONNECTIONS
 const express = require('express')
@@ -39,41 +40,41 @@ const db = getFirestore();
 
 // creating customer info for cosmetics in .doc
 
-// cosmeticCust.doc('4').set({
-// address: '222 sesame street',
-// customersid:'4',
-// email:'joeshome@gmail.com',
-// fName: 'joe',
-// lName: 'smith',
-// phone: 3056652215
-// })
-// .then(()=>{
-//     console.log('Added customer')
+cosmeticCust.doc('4').set({
+address: '222 sesame street',
+customersid:'4',
+email:'joeshome@gmail.com',
+fName: 'joe',
+lName: 'smith',
+phone: 3056652215
+})
+.then(()=>{
+    console.log('Added customer')
 
-// }).catch(console.error)
+}).catch(console.error)
 
 // // reading customer info for cosmetics
 
-// cosmeticCust
-//   .doc("2")
-//   .get()
-//   .then((doc) => {
-//     console.log(doc.id, " => ", doc.data());
-//   })
-//   .catch(console.error);
+cosmeticCust
+  .doc("2")
+  .get()
+  .then((doc) => {
+    console.log(doc.id, " => ", doc.data());
+  })
+  .catch(console.error);
 
 // read a collection function
 
-// cosmeticCust.get().then((snapshot) => {
-//   snapshot.forEach((doc) => {
-//     console.log(doc.id, "=>", doc.data());
-//   });
-// })
-// .catch(console.error)
+cosmeticCust.get().then((snapshot) => {
+  snapshot.forEach((doc) => {
+    console.log(doc.id, "=>", doc.data());
+  });
+})
+.catch(console.error)
 
-//  update a field in your collection
-// const products = db.collection('products')
-// products.doc('1').update({brand:'bobbie brown', inStock:30,})
+ //update a field in your collection
+const products = db.collection('products')
+products.doc('1').update({brand:'bobbie brown', inStock:30,})
 
 
 
@@ -81,8 +82,9 @@ const db = getFirestore();
 
 // API commands to pass the firebase functions 
 
-// read a whole collection
-app.get("/collection/getall", async (request,respose) => {});
+// tell our api to read a  collection from firebase
+app.get("/collection/getall", async (request,respose) => {
+});
 //read a single doc
 app.get("/collection/getone", async (request,response)=> {});
 //add a doc to a collection
@@ -96,6 +98,8 @@ let port = 3001
 app.listen(port,()=>{
   console.log(`listening on port ${port}`)
 })
+
+
 
 
 // http://localhost:3001/products
