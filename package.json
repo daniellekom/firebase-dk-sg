@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/daniellekom/firebase-dk-sg#readme",
   "dependencies": {
+    "express": "^4.17.2",
     "firebase-admin": "^10.0.2"
   }
 }
